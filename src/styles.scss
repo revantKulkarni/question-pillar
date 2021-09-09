@@ -1,0 +1,141 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.parent-container {
+  height: 341px;
+  border: 1px solid #c9d0d6;
+}
+
+// .content-right {
+//   display: flex;
+//   flex-direction: row;
+//   font-size: 16px;
+//   justify-content: flex-end;
+//   padding-top: 22px;
+// }
+
+// .content-left {
+//   position: absolute;
+//   top: 16px;
+//   left: 16px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+// }
+
+.title {
+  background: #ffffff;
+  border-bottom: 1px solid #c9d0d6;
+  text-align: left;
+}
+
+.left-style {
+  padding: 16px;
+  display: inline-block;
+}
+
+label {
+  margin-right: 15px;
+}
+
+
+$primary-color: #0E7B3B;
+$text-color: mix(#000, $primary-color, 64%);
+
+
+.buttons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  top: 20px;
+}
+
+label {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    justify-content: end;
+
+    input {
+        position: absolute;
+        left: -9999px;
+
+        &:checked+span {
+            background-color: mix(#fff, $primary-color, 84%);
+
+            &:before {
+                box-shadow: inset 0 0 0 0.5em $primary-color;
+            }
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        padding: 0.375em 0.75em 0.375em 0.375em;
+        border-radius: 99em; // or something higher...
+        transition: 0.25s ease;
+        font-size: 14px;
+
+        &:hover {
+            background-color: mix(#fff, $primary-color, 84%);
+        }
+
+        &:before {
+            display: flex;
+            flex-shrink: 0;
+            content: "";
+            background-color: #fff;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin-right: 0.375em;
+            transition: 0.25s ease;
+            box-shadow: inset 0 0 0 0.125em $primary-color;
+        }
+    }
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  height: 234px;
+}
+
+.col-side {
+  flex: 0 0 33.3%;
+}
+
+#col2 { flex: 1; }
+
+#container > div + div {
+  border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+#col1 { background: #EFF7FF; }
+#col2 { background: #FFEEE1; }
+#col3 { background: #E5F4E3; }
+
+.questionnaire-footer {
+  height: 56px;
+  margin: 0px 0px;
+  display: flex;
+  position: relative;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.last-audit {
+  margin-right: 20px;
+}
+
+.footer-strong {
+  font-weight: 600;
+}
